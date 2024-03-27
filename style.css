@@ -1,0 +1,29 @@
+body{
+    font-family: "Orbitron";
+    font-weight: bolder;
+}
+
+.navbar-nav{
+    width: 25%;
+}
+
+.btn{
+    width: 200px;
+}
+
+header{
+    background-color: #5A2C62;
+}
+
+body{
+    background-color: #17182B;
+}
+
+.navbar-brand{
+    color: #fff;
+}
+
+.btn{
+    background-color: #17182B;
+    color: #fff;
+}
