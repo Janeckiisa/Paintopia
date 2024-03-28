@@ -1,0 +1,37 @@
+:root{
+    --fundo: #fff;/*declaração de variáveis*/
+    --header: #a96da3;
+    --botao: #5A2C62;
+    --nome: "darkmode";
+}
+
+.darkmode{
+    --fundo: #17182B;
+    --header: #5A2C62;
+    --botao: #17182B;
+    --nome: "lightmode";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+header{
+    height: 6vh;
+    align-content: center;
+    background-color: var(--header);
+}
+
+main{
+    height: 94vh;
+    background-color: var(--fundo);
+}
+
+.orbitron-font {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    color: white;
+  }

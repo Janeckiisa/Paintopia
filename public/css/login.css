@@ -2,11 +2,6 @@
     font-size: 100%;
 }
 
-.profile{
-    display: flex;
-    justify-content: center;
-}
-
 .form-box{
     max-width: 30%;
     align-items: center;
@@ -61,15 +56,10 @@
     border-style: none;
     width: 90px;
     height: 30px;
+    display: block;
     color: aliceblue;
 }
 
-.img-cadastro{
-    width: 30%;
-    object-fit: cover;
-    border-radius: 100%;
-    border-width: 1px; 
-    border-color: #30294e;
-    border-style: dashed;
-    margin-bottom: 20px;
+.logo-header{
+    height: 10px;
 }
