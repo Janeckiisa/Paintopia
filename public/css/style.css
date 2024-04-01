@@ -2,6 +2,7 @@
     --fundo: #fff;/*declaração de variáveis*/
     --header: #a96da3;
     --botao: #5A2C62;
+    --fontecolor: #17182b;
     --nome: "darkmode";
 }
 
@@ -9,6 +10,7 @@
     --fundo: #17182B;
     --header: #5A2C62;
     --botao: #17182B;
+    --fontecolor: #fff;
     --nome: "lightmode";
 }
 

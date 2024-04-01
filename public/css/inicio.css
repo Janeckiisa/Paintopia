@@ -1,0 +1,56 @@
+body{
+    font-family: "Orbitron";
+    font-weight: bolder;
+}
+
+.navbar-nav{
+    width: 25%;
+}
+
+.btn{
+    width: 120px;
+}
+
+header{
+    background-color: #5A2C62;
+}
+
+body{
+    background-color: #17182B;
+}
+
+.navbar-brand{
+    color: #fff;
+}
+
+.btn{
+    background-color: var(--botao);
+    color: #fff;
+    font-weight: bolder;
+}
+
+img {
+    max-width:1000px;
+    max-height:900px;
+    width: auto;
+    height: auto;
+}
+
+.div-pag{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.div-frase{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--fontecolor);
+
+}
+
+.btn{
+    background-color: purple;
+    color: var(--fontecolor);
+}
