@@ -9,5 +9,10 @@ module.exports = {
 
     async pagCadastroGet(req, res) {
         res.render('../views/cadastro');
+    },
+
+    async pagCriacaoGet(req, res){
+        res.render('../views/criacao');
     }
+    
 }

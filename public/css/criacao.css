@@ -1,0 +1,55 @@
+.titulo-logo{
+    font-size: 100%;
+}
+
+.form-label{
+    color: aliceblue;
+}
+
+.titulo{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    font-size: 200%;
+}
+
+.botoes{
+    justify-content: space-between;
+}
+
+.subtitulo{
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+    font-size: 150%;
+}
+
+.botao{
+    border-radius: 25px;
+    background-color: #A96DA3;
+    border-style: none;
+    width: 50%;
+    height: 45px;
+    color: aliceblue;
+    margin: 30px auto;
+}
+
+.botao-header a{
+    text-align: center;
+    text-decoration: none;
+    text-decoration-style: none;
+}
+
+.botao-header{
+    border-radius: 25px;
+    background-color: var(--botao);
+    border-style: none;
+    width: 90px;
+    height: 30px;
+    display: block;
+    color: aliceblue;
+}
+
+.logo-header{
+    height: 10px;
+}
