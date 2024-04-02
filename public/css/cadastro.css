@@ -2,6 +2,11 @@
     font-size: 100%;
 }
 
+body{
+    font-family: "Orbitron";
+    font-weight: bolder;
+}
+
 .profile{
     display: flex;
     justify-content: center;
@@ -28,10 +33,6 @@
     font-size: 200%;
 }
 
-.botoes{
-    justify-content: space-between;
-}
-
 .subtitulo{
     display: flex;
     margin-bottom: 30px;
@@ -49,21 +50,6 @@
     margin: 30px auto;
 }
 
-.botao-header a{
-    text-align: center;
-    text-decoration: none;
-    text-decoration-style: none;
-}
-
-.botao-header{
-    border-radius: 25px;
-    background-color: var(--botao);
-    border-style: none;
-    width: 90px;
-    height: 30px;
-    color: aliceblue;
-}
-
 .img-cadastro{
     width: 30%;
     object-fit: cover;
@@ -72,4 +58,22 @@
     border-color: #30294e;
     border-style: dashed;
     margin-bottom: 20px;
+}
+
+.navbar-nav{
+    width: 25%;
+}
+
+.btn{
+    width: 120px;
+}
+
+.navbar-brand{
+    color: #fff;
+}
+ 
+.btn{
+    background-color: var(--botao);
+    color: #fff;
+    font-weight: bolder;
 }

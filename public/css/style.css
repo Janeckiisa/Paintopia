@@ -1,17 +1,16 @@
 :root{
     --fundo: #fff;/*declaração de variáveis*/
     --header: #a96da3;
-    --botao: #5A2C62;
+    --botao: purple;
     --fontecolor: #17182b;
-    --nome: "darkmode";
+    --fundocanva: #a96da3;
 }
 
 .darkmode{
     --fundo: #17182B;
     --header: #5A2C62;
-    --botao: #17182B;
+    --botao: purple;
     --fontecolor: #fff;
-    --nome: "lightmode";
 }
 
 *{

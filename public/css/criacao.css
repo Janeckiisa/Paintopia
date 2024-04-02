@@ -1,55 +1,58 @@
-.titulo-logo{
+.titulo-logo {
     font-size: 100%;
 }
 
-.form-label{
-    color: aliceblue;
+.ferramentas-box{
+    background-color: #F6C0CE;
+    width: 15vw;
+    height: 94vh;
+    padding: 10px;
 }
 
-.titulo{
-    display: flex;
-    margin: 20px;
-    justify-content: center;
-    font-size: 200%;
+.btn-purple{
+    background-color: purple;
+    color: #fff;
 }
 
-.botoes{
-    justify-content: space-between;
+.navbar-nav{
+    width: 25%;
 }
 
-.subtitulo{
-    display: flex;
-    margin-bottom: 30px;
-    justify-content: center;
-    font-size: 150%;
+.btn-header{
+    width: 120px;
 }
 
-.botao{
-    border-radius: 25px;
-    background-color: #A96DA3;
-    border-style: none;
-    width: 50%;
-    height: 45px;
-    color: aliceblue;
-    margin: 30px auto;
-}
-
-.botao-header a{
-    text-align: center;
-    text-decoration: none;
-    text-decoration-style: none;
-}
-
-.botao-header{
-    border-radius: 25px;
+.navbar-brand{
+    color: #fff;
+} 
+.btn-header{
     background-color: var(--botao);
-    border-style: none;
-    width: 90px;
-    height: 30px;
-    display: block;
-    color: aliceblue;
+    color: #fff;
+    font-weight: bolder;
 }
 
-.logo-header{
-    height: 10px;
+.canvas-box{
+    margin: 20px;
+    background-color: #fff;
+    height: 90vh;
+    width: 90%;
+}
+
+.canvas{
+    height: 100%;
+    width: 100%;
+}
+
+.container-fluid{
+    display: flex;
+    flex-direction: row;
+}
+.color-button{
+    width: 10vh;
+    height: 10vh;
+    border-radius: 100%;
+}
+
+.size-button{
+    background-color: gray;
 }

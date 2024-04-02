@@ -24,26 +24,44 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand orbitron-font">Paintopia</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                    <div class="navbar-nav botoes">
-                        <a href="/cadastro" class="botao-header">Cadastro</a>
-                        <a href="/index" class="botao-header">Inicio</a>
-                        <button class="botao-header orbitron-font" id="darkModeToggle">dark</button>
+                <a class="navbar-brand" href="/criacao">Paintopia</a>
+                <div class="collapse navbar-collapse d-flex justify-content-end align-items-center " id="navbarNavAltMarkup">
+                    <div class="navbar-nav d-flex align-items-center justify-content-between gap-30">
+                        <a class="btn btn-header rounded-pill " href="/" role="button">Inicio</a>
+                        <a class="btn btn-header rounded-pill" href="/login" role="button">Login</a>
+                        <button class="btn btn-header rounded-pill orbitron-font" id="darkModeToggle">dark</button>
                     </div>
                 </div>
             </div>
         </nav>
     </header><!--esperar pelo design da maria-->
     <main>
+        <main>
+            <div class="container-fluid ">
+                <div class="ferramentas-box">
+                    <button class="btn btn-dark color-button" data-color="black"></button>
+                    <button class="btn btn-danger color-button" data-color="red"></button>
+                    <button class="btn btn-primary color-button" data-color="blue"></button>
+                    <button class="btn btn-purple color-button" data-color="purple"></button>
+                    <button class="btn btn-warning color-button" data-color="yellow"></button>
+                    <button class="btn btn-success color-button" data-color="green"></button>
 
+                    <!-- <button class="color-button" data-color="black" style="background-image: url('../img/black.jpg');"></button> -->
+                    
+                    <button class="btn size-button" data-size="2">PP</button>
+                    <button class="btn size-button" data-size="8">M</button>
+                    <button class="btn size-button" data-size="14">G</button>
+    
+                    <button class="btn btn-purple" id="downloadBtn"> Download</button>
+    
+                </div>
+                <div class="canvas-box">
+                    <canvas id="myCanvas" class="canvas"></canvas>
+                </div>
+            </div>
+        </main>
     </main>
-    <script src="js/index.js"></script>
+    <script src="js/criacao.js"></script>
     <script src="js/script.js"></script>
 </body>
 

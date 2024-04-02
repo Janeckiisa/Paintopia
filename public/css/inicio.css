@@ -47,10 +47,4 @@ img {
     flex-direction: column;
     justify-content: center;
     color: var(--fontecolor);
-
-}
-
-.btn{
-    background-color: purple;
-    color: var(--fontecolor);
 }

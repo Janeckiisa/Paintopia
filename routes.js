@@ -9,4 +9,6 @@ route.get('/cadastro', home.pagCadastroGet);
 
 route.get('/login', home.pagLoginGet);
 
+route.get('/criacao', home.pagCriacaoGet);
+
 module.exports = route;
