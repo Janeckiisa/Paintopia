@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const database = require('../config/db');
+const login = require('./login');
 
 const repositorio = database.define('Repositorio', {
     IDRepositorio: {
@@ -7,6 +8,10 @@ const repositorio = database.define('Repositorio', {
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
+    },
+
+    IDLogin: {
+        type: Sequelize.INTEGER
     },
 
     Nome: {
@@ -19,3 +24,10 @@ const repositorio = database.define('Repositorio', {
         allowNull: false
     }/*precisa de alterações*/
 });
+
+repositorio.belongsTo(login, {
+    constraint: true,
+    foreignKey: 'IDLogin'
+});
+
+module.exports = repositorio;

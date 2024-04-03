@@ -2,16 +2,19 @@
     font-size: 100%;
 }
 
-.ferramentas-box{
+.ferramentas-box {
     background-color: #F6C0CE;
     width: 15vw;
     height: 94vh;
-    padding: 10px;
+    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.btn-purple{
-    background-color: purple;
-    color: #fff;
+body{
+    font-family: "Orbitron";
+    font-weight: bolder;
 }
 
 .navbar-nav{
@@ -33,7 +36,9 @@
 
 .canvas-box{
     margin: 20px;
-    background-color: #fff;
+    border-style: double;
+    border-width: 5px;
+    border-color: #a96da3;
     height: 90vh;
     width: 90%;
 }
@@ -47,12 +52,20 @@
     display: flex;
     flex-direction: row;
 }
-.color-button{
-    width: 10vh;
-    height: 10vh;
+
+.color-button {
+    width: 8vh;
+    height: 8vh;
     border-radius: 100%;
+    margin-bottom: 1vh;
 }
 
-.size-button{
+.color-container {
+    padding: 5px;
+    align-items: center;
+}
+
+.size-button {
     background-color: gray;
+    margin-bottom: 1vh; 
 }

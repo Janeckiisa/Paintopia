@@ -7,7 +7,7 @@ body{
     width: 25%;
 }
 
-.btn{
+.btn-header{
     width: 120px;
 }
 
@@ -23,7 +23,7 @@ body{
     color: #fff;
 }
 
-.btn{
+.btn-header{
     background-color: var(--botao);
     color: #fff;
     font-weight: bolder;
@@ -38,12 +38,6 @@ img {
 
 .div-pag{
     display: flex;
-    flex-direction: row;
-}
-
-.div-frase{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    color: var(--fontecolor);
+    align-items: center;
 }

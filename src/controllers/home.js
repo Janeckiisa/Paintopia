@@ -13,6 +13,10 @@ module.exports = {
 
     async pagCriacaoGet(req, res){
         res.render('../views/criacao');
+    },
+
+    async pagRepositorioGet(req, res){
+        res.render('../views/repositorio');
     }
     
 }
