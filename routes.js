@@ -2,17 +2,22 @@ const express = require('express');
 const route = express.Router();
 
 const home = require('./src/controllers/home');
-//const cadastro = require('./src/controllers/cadastro);
+const cadastro = require('./src/controllers/cadastro');
 //const desenho = require('./src/controllers/desenho);
 
 
 route.get('/', home.pagInicialGet);
 
-route.get('/cadastro', home.pagCadastroGet);
+route.get('/cadastro', cadastro.cadastro);
+route.post('/cadastro', cadastro.loginInsert);
 
-route.get('/login', home.pagLoginGet);
+route.get('/login', cadastro.login);
+route.post('/login', cadastro.loginPost);
+route.post('/verificar-usuario-email', cadastro.verificarUsuarioEmail);
+
 
 route.get('/criacao', home.pagCriacaoGet);
+//route.post('/criacao', desenho.salvarDesenho);
 
 route.get('/repositorio', home.pagRepositorioGet)
 
