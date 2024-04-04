@@ -1,0 +1,50 @@
+body{
+    font-family: "Orbitron";
+    font-weight: bolder;
+}
+
+.navbar-nav{
+    width: 25%;
+}
+
+.btn-header{
+    width: 120px;
+}
+
+.navbar-brand{
+    color: #fff;
+} 
+.btn-header{
+    background-color: var(--botao);
+    color: #fff;
+    font-weight: bolder;
+}
+
+img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-align: start;
+    padding: 10px;
+    width:180px;
+
+}
+
+.user-options.show {
+    display: block;
+}
+
+.user-options ul{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    width: 90%;
+}

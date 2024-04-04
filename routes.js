@@ -16,4 +16,6 @@ route.get('/criacao', home.pagCriacaoGet);
 
 route.get('/repositorio', home.pagRepositorioGet)
 
+route.get('/editar', home.pagEditarGet)
+
 module.exports = route;
