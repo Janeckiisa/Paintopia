@@ -42,13 +42,17 @@
       <div class="container-fluid form-box">
         <p class="titulo orbitron-font" style="color: aliceblue;">Paintopia</p>
         <p class="subtitulo" style="color: aliceblue;">Login</p>
-        <form action="/login" method="post" style="justify-content: center; text-align: center;">
 
-          <label class="form-label orbitron-font">Email</label>
-          <input type="email" class="form-control" name="email" required>
+
+        <form id="loginForm" action="/login" method="post" style="justify-content: center; text-align: center;">
+
+          <label class="form-label orbitron-font">Usuario ou Email</label>
+          <input id="inputname" type="text" class="form-control" name="username" required>
 
           <label class="form-label orbitron-font">Senha</label>
-          <input type="password" class="form-control" name="senha" required>
+          <input id="inputpassword" type="password" class="form-control" name="password" required>
+
+          <div id="error-message" style="display: none; color: red;">Usuário ou email incorretos</div>
 
           <button type="post" value="Enviar" class="botao orbitron-font
           ">Entrar</button>

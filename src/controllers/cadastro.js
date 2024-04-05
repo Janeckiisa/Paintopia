@@ -1,4 +1,5 @@
 const login = require('../model/login');
+const { Op } = require('sequelize');
 //const repositorio = require('../model/login');
 
 module.exports = {
@@ -7,53 +8,38 @@ module.exports = {
     },
 
     async loginPost(req, res) {
-        const { username, password } = req.body;
+        const username = req.body.username;
+        const password = req.body.password;
 
-        login.findOne({
-            where: {
-                [Op.or]: [
-                    { Usuario: username },
-                    { Email: username }
-                ],
-                Senha: password
-            }
-        })
-            .then(user => {
-                if (user) {
-                    req.session.user = user;
-                    res.redirect('/repositorio');
-                } else {
-                    // Credenciais inválidas, retornar erro
-                    res.render('../views/login', { errorMessage: 'Credenciais inválidas.' });
-                }
-            })
-            .catch(error => {
-                console.error('Erro no login:', error);
-                res.render('../views/login', { errorMessage: 'Erro no login. Por favor, tente novamente mais tarde.' });
-            });
-    },
+        console.log(req.body)
 
-    async verificarUsuarioEmail(req, res) {
-        const { usuario, email } = req.body;
+        if (!username || !password) {
+            return res.status(400).send('Usuário ou senha não fornecidos.');
+        }
 
         try {
-            // Verificar se o usuário já existe
-            const usuarioExistente = await login.findOne({ where: { Usuario: usuario } });
-            if (usuarioExistente) {
-                return res.status(400).send('O usuário já está em uso.');
+            const user = await login.findOne({
+                where: {
+                    [Op.or]: [
+                        { Usuario: username },
+                        { Email: username }
+                    ]
+                }
+            });
+
+            if (!user) {
+                return res.status(400).send('Usuário não encontrado.');
             }
 
-            // Verificar se o email já existe
-            const emailExistente = await login.findOne({ where: { Email: email } });
-            if (emailExistente) {
-                return res.status(400).send('O email já está em uso.');
+            if (user.Senha !== password) {
+                return res.status(400).send('Senha incorreta.');
             }
 
-            // Se o usuário e o email não existem, enviar uma resposta de sucesso
-            res.sendStatus(200);
+            req.session.user = user;
+            res.redirect('/repositorio');
         } catch (error) {
-            console.error('Erro ao verificar usuário e email:', error);
-            res.status(500).send('Erro ao verificar usuário e email.');
+            console.error('Erro no login:', error);
+            res.status(500).send('Erro ao fazer login.');
         }
     },
 
@@ -62,14 +48,38 @@ module.exports = {
     },
 
     async loginInsert(req, res) {
-        const dados = req.body;
-        await login.create({
-            Usuario: dados.usuario,
-            Email: dados.email,
-            Senha: dados.senha
-        });
+        const usuario = req.body.usuario;
+        const email = req.body.email;
+        const senha = req.body.senha;
 
-        res.redirect('/');
+        if (!usuario || !email || !senha) {
+            return res.status(400).send('Usuário, email ou senha não fornecidos.');
+        }
+
+        try {
+            const usuarioExistente = await login.findOne({ where: { Usuario: usuario } });
+            const emailExistente = await login.findOne({ where: { Email: email } });
+
+            if (usuarioExistente) {
+                return res.status(400).send('O usuário já está em uso.');
+            }
+
+            if (emailExistente) {
+                return res.status(400).send('O email já está em uso.');
+            }
+
+            await login.create({
+                Usuario: usuario,
+                Email: email,
+                Senha: senha
+            });
+
+
+            res.redirect('/login');
+        } catch (error) {
+            console.error('Erro no cadastro:', error);
+            res.status(500).send('Erro ao cadastrar usuário.');
+        }
     },
 
     async arquivo(req, res) {

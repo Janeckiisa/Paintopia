@@ -8,12 +8,12 @@ const cadastro = require('./src/controllers/cadastro');
 
 route.get('/', home.pagInicialGet);
 
+
 route.get('/cadastro', cadastro.cadastro);
 route.post('/cadastro', cadastro.loginInsert);
 
 route.get('/login', cadastro.login);
 route.post('/login', cadastro.loginPost);
-route.post('/verificar-usuario-email', cadastro.verificarUsuarioEmail);
 
 
 route.get('/criacao', home.pagCriacaoGet);
