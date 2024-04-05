@@ -48,3 +48,36 @@ img{
     background-color: #fff;
     width: 90%;
 }
+
+.div-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.div-form form {
+    padding: 20px;
+    background-image: url('../img/tela-login.png');
+    width: 350px;
+    max-width: 90%;
+    border-radius: 15px;
+    color: #fff;
+}
+
+#image_user {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/* 
+.btn{
+    border-radius: 25px;
+    background-color: #A96DA3;
+    border-style: none;
+    width: 50%;
+    height: 45px;
+    color: aliceblue;
+    margin: 30px auto;
+} */

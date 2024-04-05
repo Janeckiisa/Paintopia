@@ -35,4 +35,18 @@ main{
     font-optical-sizing: auto;
     font-weight: bolder;
     color: white;
-  }
+}
+
+.user-dropdown {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+.user-dropdown > ul {
+    margin: auto;
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
