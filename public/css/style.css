@@ -1,33 +1,34 @@
-:root{
-    --fundo: #fff;/*declaração de variáveis*/
+:root {
+    --fundo: #fff;
     --header: #a96da3;
     --botao: purple;
     --fontecolor: #17182b;
     --fundocanva: #a96da3;
 }
 
-.darkmode{
+.darkmode {
     --fundo: #17182B;
     --header: #5A2C62;
     --botao: purple;
     --fontecolor: #fff;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: 0;
 }
 
-header{
+header {
     height: 6vh;
     align-content: center;
     background-color: var(--header);
 }
 
-main{
+main {
     height: 94vh;
     background-color: var(--fundo);
+    color: var(--fontecolor);
 }
 
 .orbitron-font {
@@ -35,4 +36,4 @@ main{
     font-optical-sizing: auto;
     font-weight: bolder;
     color: white;
-  }
+}
