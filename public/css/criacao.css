@@ -69,3 +69,17 @@ body{
     background-color: gray;
     margin-bottom: 1vh; 
 }
+
+/*Para celulares*/
+@media(min-width: 320px) and (max-width: 767px ) {
+    
+}
+
+/* 768px - 1024px = telas menores, laptops */
+@media (min-width: 768px) {}
+
+/* 1024px - 1200px = desktop menores */
+@media (min-width: 769px) and (max-width: 1023px) {}
+
+/* Telas maiores*/
+@media (min-width: 1024px) {}
