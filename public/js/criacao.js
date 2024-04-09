@@ -1,10 +1,7 @@
-//const fabric = require("fabric").fabric;
-import fabric from 'fabric';
+
 let canvas = document.querySelector(".canvas-box canvas");
 
 let currentSVG = 1;
-
-canvas = new fabric.Canvas('canvas');
 
 document.getElementById('eraserBtn').addEventListener('click', function() {
     const svgToChange = document.getElementById('pencil-eraser');
@@ -121,13 +118,6 @@ window.onload = function () {
             link.click();
         });
 
-        document.getElementById('saveBtn').addEventListener('click', function () {
-            var jsonData = JSON.stringify(canvas2);
-            localStorage.setItem('drawing', jsonData);
-            alert('Desenho salvo com sucesso!')
-            console.log(jsonData);
-        })
-
     }
     init();
 
@@ -154,3 +144,4 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 });
+
