@@ -61,13 +61,14 @@ img{
     background-image: url('../img/tela-login.png');
     width: 350px;
     max-width: 90%;
+    justify-content: center;
     border-radius: 15px;
     color: #fff;
 }
 
 #image_user {
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
     object-fit: cover;
     border-radius: 50%;
 }
