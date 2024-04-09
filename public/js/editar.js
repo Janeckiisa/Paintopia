@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function(){
     const userOptions = document.getElementById('user-options');
     const userAvatar = document.getElementById('user-avatar');

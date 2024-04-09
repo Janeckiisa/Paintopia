@@ -26,10 +26,10 @@ let senha;
 document.getElementById('cadastroForm').addEventListener('submit', async function (event) {
     event.preventDefault();
 
-    var username = document.getElementById('usuario').value;
+    let username = document.getElementById('usuario').value;
     email = document.getElementById('email').value;
     senha = document.getElementById('senha').value;
-    var confirmaSenha = document.getElementById('confirmaSenha').value;
+    let confirmaSenha = document.getElementById('confirmaSenha').value;
 
     if (senha !== confirmaSenha) {
         document.getElementById('senhaError').style.display = 'block';
