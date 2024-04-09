@@ -17,6 +17,8 @@ header{
 
 body{
     background-color: #17182B;
+    justify-content: center;
+    align-content: center;
 }
 
 .navbar-brand{
@@ -29,11 +31,11 @@ body{
     font-weight: bolder;
 }
 
-img {
-    max-width:1000px;
-    max-height:900px;
-    width: auto;
-    height: auto;
+.img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .div-pag{
@@ -43,4 +45,20 @@ img {
     width: 1200px;
     max-width: 95%;
     flex-wrap: wrap;
+}
+
+.container-fluid{
+    align-items: center;
+    justify-content: center;
+}
+
+.user-options.show {
+    display: block;
+}
+
+.user-options ul{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    width: 90%;
 }

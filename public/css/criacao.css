@@ -2,6 +2,10 @@
     font-size: 100%;
 }
 
+.btn-purple{
+    background-color: purple;
+}
+
 .ferramentas-box {
     background-color: #F6C0CE;
     width: 15vw;
@@ -23,16 +27,16 @@ body{
 
 .btn-header{
     width: 120px;
-}
-
-.navbar-brand{
-    color: #fff;
-} 
-.btn-header{
     background-color: var(--botao);
     color: #fff;
     font-weight: bolder;
 }
+
+.navbar-brand{
+    color: #fff;
+    margin-left: 20px;
+} 
+
 
 .canvas-box{
     margin: 20px;
@@ -51,6 +55,7 @@ body{
 .container-fluid{
     display: flex;
     flex-direction: row;
+    padding: 0;
 }
 
 .color-button {
@@ -70,16 +75,123 @@ body{
     margin-bottom: 1vh; 
 }
 
+.img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-align: start;
+    padding: 10px;
+    width:180px;
+
+}
+
+.user-options.show {
+    display: block;
+}
+
+.user-options ul{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    width: 90%;
+}
 /*Para celulares*/
 @media(min-width: 320px) and (max-width: 767px ) {
-    
+
+    .main{
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+ 
+    .color-group, 
+    .tool-group{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ferramentas-box{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        height: auto;
+        padding: 2%;
+    }
+
+    .color-button{
+        height: 4vh;
+        width: 10vw;
+    }
+
+    .canvas-box{
+        height: 65vh;
+    }
+
+    .navbar-nav{
+        width: 50vw;
+    }
 }
 
 /* 768px - 1024px = telas menores, laptops */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
 
-/* 1024px - 1200px = desktop menores */
-@media (min-width: 769px) and (max-width: 1023px) {}
+    .color-group, 
+    .tool-group{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ferramentas-box{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2%;
+    }
+
+    .color-button{
+        height: 8vh;
+        width: 6vw;
+    }
+
+    .canvas-box{
+        height: auto;
+    }
+
+    .navbar-brand{
+        margin-left: 20px;
+    }
+}
 
 /* Telas maiores*/
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+    .color-button{
+        height: 10vh;
+        width: 6vw;
+    }
+
+    .size-button{
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .btn-purple{
+        width: 5vw;
+        height: 5vw;
+    }
+
+}

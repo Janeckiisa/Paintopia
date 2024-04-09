@@ -20,7 +20,6 @@
 }
 
 header {
-    height: 6vh;
     align-content: center;
     background-color: var(--header);
 }
