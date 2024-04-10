@@ -1,6 +1,7 @@
 const { raw } = require('express');
 const login = require('../model/login');
-const { where } = require('sequelize');
+const db = require('../config/db');
+const sequelize = require('sequelize');
 
 module.exports = {
     async editGet(req, res) {
@@ -26,17 +27,27 @@ module.exports = {
                     where: { IDLogin: IDUser }
                 });
         }
-        else
+        else {
+            return res.status(400).send('Senhas não correspondentes.');
+        }
 
         res.redirect('/editar');
     },
-    async deleteUser(req, res){
-        await login.destroy({
+    async deletePost(req, res){
+        const query = 'DELETE FROM Logins WHERE :iduser';
+        const parameters = { iduser: IDLogin };
 
-        
-    },
-        {where: {IDLogin: ISUser}
-    });
+        try {
+            await db.query(query, {
+                replacements: parameters,
+                type: sequelize.QueryTypes.DELETE
+            });
+            console.log('user deleted with success!');
+            res.redirect('/');
+        } catch {
+            console.log('ERROR! User not deleted');
+        }
 
-}
+    }
+
 }

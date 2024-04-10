@@ -27,7 +27,8 @@ const repositorio = database.define('Repositorio', {
 
 repositorio.belongsTo(login, {
     constraint: true,
-    foreignKey: 'IDLogin'
+    foreignKey: 'IDLogin',
+    onDelete: CASCADE
 });
 
 module.exports = repositorio;

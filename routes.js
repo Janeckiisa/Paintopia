@@ -25,6 +25,6 @@ route.get('/repositorio', home.pagRepositorioGet);
 route.get('/editar', editar.editGet);
 route.post('/editar', editar.editPost);
 
-
+route.post('/delete', editar.deletePost);
 
 module.exports = route;
