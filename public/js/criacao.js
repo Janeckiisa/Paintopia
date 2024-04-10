@@ -118,6 +118,11 @@ window.onload = function () {
             link.click();
         });
 
+
+        document.getElementById('clearBtn').addEventListener('click', function(){
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        })
+
     }
     init();
 
