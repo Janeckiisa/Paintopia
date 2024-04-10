@@ -18,9 +18,5 @@ module.exports = {
     async pagRepositorioGet(req, res){
         res.render('../views/repositorio');
     },
-
-    async pagEditarGet(req, res){
-        res.render('../views/editar');
-    }
     
 }

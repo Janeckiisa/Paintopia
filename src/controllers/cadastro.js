@@ -19,6 +19,7 @@ module.exports = {
 
         try {
             const user = await login.findOne({
+                raw:true,
                 where: {
                     [Op.or]: [
                         { Usuario: username },
@@ -35,8 +36,10 @@ module.exports = {
                 return res.status(400).send('Senha incorreta.');
             }
 
-            req.session.user = user;
-            res.redirect('/repositorio');
+            // req.session.user = user;
+            global.IDUser = user.IDLogin;
+            console.log("Login:", IDUser);
+            res.render('../views/criacao',{user, IDUser});
         } catch (error) {
             console.error('Erro no login:', error);
             res.status(500).send('Erro ao fazer login.');

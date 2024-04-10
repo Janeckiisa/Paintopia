@@ -3,6 +3,7 @@ const route = express.Router();
 
 const home = require('./src/controllers/home');
 const cadastro = require('./src/controllers/cadastro');
+const editar = require('./src/controllers/edit');
 //const desenho = require('./src/controllers/desenho);
 
 
@@ -19,8 +20,11 @@ route.post('/login', cadastro.loginPost);
 route.get('/criacao', home.pagCriacaoGet);
 //route.post('/criacao', desenho.salvarDesenho);
 
-route.get('/repositorio', home.pagRepositorioGet)
+route.get('/repositorio', home.pagRepositorioGet);
 
-route.get('/editar', home.pagEditarGet)
+route.get('/editar', editar.editGet);
+route.post('/editar', editar.editPost);
+
+
 
 module.exports = route;

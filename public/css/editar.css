@@ -45,7 +45,6 @@ img{
 .user-options ul{
     margin: 0;
     padding: 0;
-    background-color: #550047;
     width: 90%;
 }
 
@@ -72,13 +71,25 @@ img{
     object-fit: cover;
     border-radius: 50%;
 }
-/* 
-.btn{
+
+.btn2{
     border-radius: 25px;
     background-color: #A96DA3;
     border-style: none;
     width: 50%;
     height: 45px;
     color: aliceblue;
+    font-weight: bold;
     margin: 30px auto;
-} */
+}
+
+.btn3{
+    border-radius: 25px;
+    background-color: #5a0505;
+    border-style: none;
+    width: 50%;
+    height: 45px;
+    color: aliceblue;
+    font-weight: bold;
+    margin: 10px auto;
+}
