@@ -24,7 +24,7 @@ header {
     background-color: var(--header);
 }
 
-main {
+body {
     height: 94vh;
     background-color: var(--fundo);
     color: var(--fontecolor);
@@ -49,4 +49,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.navbar-toggler{
+    background-color: var(--botao);
 }

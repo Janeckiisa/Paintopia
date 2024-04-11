@@ -63,19 +63,19 @@
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label ">Alterar e-mail</label>
-                    <input type="email" class="form-control" idamp="exleFormControlInput1" value="<%=  user.Email %>"  name="email">
+                    <input type="email" class="form-control" idamp="exleFormControlInput1" value="<%=  user.Email %>"  name="email" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Alterar nome</label>
-                    <input type="text" class="form-control" idamp="exleFormControlInput1" value="<%=  user.Usuario %>" name="usuario">
+                    <input type="text" class="form-control" idamp="exleFormControlInput1" value="<%=  user.Usuario %>" name="usuario" required>
                 </div>
                 <div class="mb-3">
                     <label for="inputPassword5" class="form-label">Alterar senha</label>
-                    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" name="senha">
+                    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" name="senha" required>
                 </div>
                 <div class="mb-3">
                     <label for="inputPassword5" class="form-label">Confirmar senha</label>
-                    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" name="senhaConfirmar">
+                    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" name="senhaConfirmar" required>
                 </div>
                 <button id="btneditar" class="btn2 btn-primary" type="submit">Salvar</button>
             </form>
