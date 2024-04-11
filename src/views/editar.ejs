@@ -36,9 +36,10 @@
                     <div class="navbar-nav d-flex align-items-center justify-content-around gap-3">
                         <button class="btn btn-header rounded-pill orbitron-font" id="darkModeToggle">dark</button>
 
-                        <img id="user-avatar" src="./img/usuario.png" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <div class="user-options  user-dropdown"  id="user-options">
-                            <ul type="none" >
+                        <img id="user-avatar" src="./img/usuario.png" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        <div class="user-options  user-dropdown" id="user-options">
+                            <ul type="none">
                                 <li> <a href="/criacao" id="backcreate">Criar</a></li>
                                 <li> <a href="/" id="logout">Sair</a></li>
                             </ul>
@@ -54,52 +55,63 @@
             <h1 class="text-center">Altere suas informações de usuario: </h1>
         </div>
         <div class="div-form " img="./img/usuario.png">
-            <form action="/editar" method="post">
+            <form class="form1" action="/editar" method="post">
                 <div class="mb-3 d-flex flex-column">
                     <label for="flImage" style="align-self: center;cursor: pointer;">
                         <img src="./img/usuario.png" alt="" id="image_user">
                     </label>
                     <input type="file" id="flImage" name="foto" accept="image/*" style="display: none;">
 
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label ">Alterar e-mail</label>
-                    <input type="email" class="form-control" idamp="exleFormControlInput1" value="<%=  user.Email %>"  name="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Alterar nome</label>
-                    <input type="text" class="form-control" idamp="exleFormControlInput1" value="<%=  user.Usuario %>" name="usuario" required>
-                </div>
-                <div class="mb-3">
-                    <label for="inputPassword5" class="form-label">Alterar senha</label>
-                    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" name="senha" required>
-                </div>
-                <div class="mb-3">
-                    <label for="inputPassword5" class="form-label">Confirmar senha</label>
-                    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" name="senhaConfirmar" required>
-                </div>
-                <button id="btneditar" class="btn2 btn-primary" type="submit">Salvar</button>
-            </form>
-            <form action="/delete" method="post">
-                <button id="btndelete" class="btn3 btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal" >Excluir</button>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body" style="color:black">
-                          Tem certeza que deseja excluir a conta? 
-                          Seus dados serão perdidos!
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn2 btn-secondary" data-bs-dismiss="modal">Não</button>
-                          <button type="button" class="btn3 btn-primary" type="submit">Sim, excluir</button>
-                        </div>
-                      </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label ">Alterar e-mail</label>
+                        <input type="email" class="form-control" idamp="exleFormControlInput1"
+                            value="<%=  user.Email %>" name="email" required>
                     </div>
-                  </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Alterar nome</label>
+                        <input type="text" class="form-control" idamp="exleFormControlInput1"
+                            value="<%=  user.Usuario %>" name="usuario" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputPassword5" class="form-label">Alterar senha</label>
+                        <input type="password" id="inputPassword5" class="form-control"
+                            aria-describedby="passwordHelpBlock" name="senha" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputPassword5" class="form-label">Confirmar senha</label>
+                        <input type="password" id="inputPassword5" class="form-control"
+                            aria-describedby="passwordHelpBlock" name="senhaConfirmar" required>
+                    </div>
+                    <button id="btneditar" class="btn2 btn-primary" type="submit">Salvar</button>
+                    <button  type="button" id="btndelete" class="btn3 btn-primary " data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Excluir</button>
             </form>
+             
+           
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" style="color:black">
+                                Tem certeza que deseja excluir a conta?
+                                Seus dados serão perdidos!
+                            </div>
+                            <div class="modal-footer">
+                                <form action="/delete" method="post" class="modal-form">
+                                    <button type="button" class="btn2 btn-secondary" data-bs-dismiss="modal">Não</button>
+                                    <button class="btn3 btn-primary" type="submit">Sim, excluir</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
         </div>
     </main>
     <script src="js/script.js"></script>

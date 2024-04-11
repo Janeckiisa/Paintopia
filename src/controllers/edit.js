@@ -34,19 +34,9 @@ module.exports = {
         res.redirect('/editar');
     },
     async deletePost(req, res){
-        const query = 'DELETE FROM Logins WHERE :iduser';
-        const parameters = { iduser: IDLogin };
-
-        try {
-            await db.query(query, {
-                replacements: parameters,
-                type: sequelize.QueryTypes.DELETE
-            });
-            console.log('user deleted with success!');
-            res.redirect('/');
-        } catch {
-            console.log('ERROR! User not deleted');
-        }
+        
+        await login.destroy({ where: { IDLogin: IDUser } });
+        res.redirect('/');
 
     }
 
