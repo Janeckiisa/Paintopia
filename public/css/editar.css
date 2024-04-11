@@ -55,7 +55,7 @@ img{
     
 }
 
-.div-form form {
+.form1 {
     padding: 20px;
     background-image: url('../img/tela-login.png');
     width: 350px;
@@ -92,4 +92,11 @@ img{
     color: aliceblue;
     font-weight: bold;
     margin: 10px auto;
+}
+
+.modal-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
